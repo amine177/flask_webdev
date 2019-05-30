@@ -9,3 +9,13 @@ def get_user(id):
     if not user:
         abort(404)
     return '<h1>Hello, {}</h1>'.format(user.name)
+
+def load_user(id):
+    if int(id) > 5:
+        return User("Success")
+    else: return None
+
+class User:
+    def __init__(self, name):
+        self.name = name;
+
